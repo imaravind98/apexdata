@@ -1,3 +1,30 @@
 .corusel{
     padding: 10px 0px;
+    position: relative;
+    &  img{
+        margin: 0 auto;
+        display:block;
+    }
+    text-align: center;
+}
+
+#corusel-details{
+    position: absolute;
+    border: 1px double black;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#corusel-heading {
+    color: black;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#corusel-caption {
+    color: black;
 }
