@@ -24,6 +24,8 @@
                             <div id="corusel-caption">From January 11th to February 1st, We\u2019re going deep in our new event featuring a new Arenas map, themed cosmetics, and Flash Events!</div>
                         </div>
                     </a>
+                    <div class="prev">&#10094;</div>
+                    <div class="next">&#10095;</div>
                 </div>
             </div>
         </div>
@@ -34,6 +36,11 @@
             require(['config'], function(){
                 require(['navigation'], function(navigation){
                     navigation.init();
+                });
+            });
+            require(['config'], function(){
+                require(['view/ui_components/corusel/scripts/newsdata'], function(newsdata){
+                    console.log(newsdata.data());
                 });
             });
         </script>
