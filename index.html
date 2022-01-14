@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apex Legends Details - Home</title>
+        <link rel="stylesheet" href="view/css/style.css">
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/fontawesome/css/all.css">
+        <script data-main="lib/requirejs/config" src = "lib/requirejs/require.js"></script>
+    </head>
+
+    <body>
+        <div class="main">
+            <div id="navigation-bar" data-bind='html: navigationBar'>
+            </div>
+            <div class="container-fluid">
+                <div id="corusel" class="corusel">
+                    <img src="https:\/\/media.contentapi.ea.com\/content\/dam\/apex-legends\/common\/articles\/raiders-collection-event\/apex-raiders-event-3840x2160-master16x9.jpg.adapt.crop16x9.431p.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <script>
+            require(['config'], function(){
+                require(['bootstrap'], function(){});
+            });
+            require(['config'], function(){
+                require(['navigation'], function(navigation){
+                    navigation.init();
+                });
+            });
+        </script>
+    </body>
+</html>

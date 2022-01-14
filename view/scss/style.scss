@@ -1,0 +1,11 @@
+@import 'variables.scss';
+@import '../ui_components/navigation/styles/navigation.scss';
+@import '../ui_components/corusel/styles/corusel.scss';
+
+*{
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    width: 100%;
+}
