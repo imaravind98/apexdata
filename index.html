@@ -25,7 +25,7 @@
             <div class="container">
                 <div id="corusel" class="corusel">
                     <a data-bind="attr:{href:link}">
-                        <img id="corusel-img" data-bind="attr:{src:imageSrc}" alt="des" width="100%" height="auto">
+                        <img id="corusel-img" data-bind="attr:{src:imageSrc, alt:coruselHeading}" width="100%" height="auto">
                         <div id="corusel-details">
                             <div id="corusel-heading" data-bind="text:coruselHeading"></div>
                             <div id="corusel-caption" data-bind="text:shortDes"></div>
@@ -38,6 +38,60 @@
                     require(['config'], function(){
                         require(['view/ui_components/corusel/scripts/news'], function(news){
                             news.init();
+                        });
+                    });
+                </script>
+
+                <div id="map-rotation" class="map-rotation">
+                    <div class="map-rotation-heading">Map Rotation</div>
+                    <div class="map-rotation-section-heading">Battle Royale</div>
+                    <div class="map-rotation-section">
+                        <div class="map-rotation-section-contents">
+                            <div class="map-rotation-section-contents-heading">Normal</div>
+                            <div class="map-rotation-battleroyale-normal-content">
+                                <div data-bind="text:battleRoyaleMapName" class="map-rotation-name">Storm Point</div>
+                                <img data-bind="attr:{src:battleRoyaleMapImg, alt:battleRoyaleMapName}" class="map-rotation-img">
+                                <div data-bind="text:battleRoyaleMapTime" class="map-rotation-time">00:22:36</div>
+                                <div data-bind="text:battleRoyaleMapNext" class="map-rotation-next">Next:World's Edge</div>
+                                <div data-bind="text:battleRoyaleMapDuration" class="map-rotation-duration">Duration:90 Minutes</div>
+                            </div>
+                        </div>
+                        <div class="map-rotation-section-contents">
+                            <div class="map-rotation-section-contents-heading">Ranked</div>
+                            <div class="map-rotation-battleroyale-normal-content">
+                                <div data-bind="text:rankedMapName" class="map-rotation-name">Worlds Edge</div>
+                                <img data-bind="attr:{src:rankedMapImg, alt:rankedMapName}" class="map-rotation-img">
+                                <div data-bind="text:rankedMapNext" class="map-rotation-next">Next:Unkown</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-rotation-section-heading">Arenas</div>
+                    <div class="map-rotation-section">
+                        <div class="map-rotation-section-contents">
+                            <div class="map-rotation-section-contents-heading">Normal</div>
+                            <div class="map-rotation-battleroyale-normal-content">
+                                <div data-bind="text:arenasMapName" class="map-rotation-name">Storm Point</div>
+                                <img data-bind="attr:{src:arenasMapImg, alt:arenasMapName}" class="map-rotation-img">
+                                <div data-bind="text:arenasMapTime" class="map-rotation-time">00:22:36</div>
+                                <div data-bind="text:arenasMapNext" class="map-rotation-next">Next:World's Edge</div>
+                                <div data-bind="text:arenasMapDuration" class="map-rotation-duration">Duration:90 Minutes</div>
+                            </div>
+                        </div>
+                        <div class="map-rotation-section-contents">
+                            <div class="map-rotation-section-contents-heading">Ranked</div>
+                            <div class="map-rotation-battleroyale-normal-content">
+                                <div data-bind="text:rankedArenasMapName" class="map-rotation-name">Worlds Edge</div>
+                                <img data-bind="attr:{src:rankedArenasMapImg, alt:rankedArenasMapName}" class="map-rotation-img">
+                                <div data-bind="text:rankedArenasMapTime" class="map-rotation-time">00:22:36</div>
+                                <div data-bind="text:rankedArenasMapNext" class="map-rotation-next">Next:World's Edge</div>
+                                <div data-bind="text:rankedArenasMapDuration" class="map-rotation-duration">Duration:90 Minutes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    require(['config'], function(){
+                        require(['view/ui_components/maprotation/scripts/mapRotation'], function(){
                         });
                     });
                 </script>
