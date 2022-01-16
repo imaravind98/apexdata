@@ -15,33 +15,37 @@
         <div class="main">
             <div id="navigation-bar" data-bind='html: navigationBar'>
             </div>
-            <div class="container-fluid">
+            <script>
+                require(['config'], function(){
+                    require(['navigation'], function(navigation){
+                        navigation.init();
+                    });
+                });
+            </script>
+            <div class="container">
                 <div id="corusel" class="corusel">
-                    <a href ="https:\/\/www.ea.com\/games\/apex-legends\/news\/dark-depths-event">
-                        <img id="corusel-img" src="https:\/\/media.contentapi.ea.com\/content\/dam\/apex-legends\/common\/articles\/dark-depths\/dark-depths-featured.jpg.adapt.crop16x9.431p.jpg" alt="des" width="100%" height="auto">
+                    <a data-bind="attr:{href:link}">
+                        <img id="corusel-img" data-bind="attr:{src:imageSrc}" alt="des" width="100%" height="auto">
                         <div id="corusel-details">
-                            <div id="corusel-heading">Discover Habitat and more in the Dark Depths Event</div>
-                            <div id="corusel-caption">From January 11th to February 1st, We\u2019re going deep in our new event featuring a new Arenas map, themed cosmetics, and Flash Events!</div>
+                            <div id="corusel-heading" data-bind="text:coruselHeading"></div>
+                            <div id="corusel-caption" data-bind="text:shortDes"></div>
                         </div>
                     </a>
-                    <div class="prev">&#10094;</div>
-                    <div class="next">&#10095;</div>
+                    <div class="prev" data-bind="click:coruselPrev">&#10094;</div>
+                    <div class="next" data-bind="click:coruselNext">&#10095;</div>
                 </div>
+                <script>
+                    require(['config'], function(){
+                        require(['view/ui_components/corusel/scripts/news'], function(news){
+                            news.init();
+                        });
+                    });
+                </script>
             </div>
         </div>
         <script>
             require(['config'], function(){
                 require(['bootstrap'], function(){});
-            });
-            require(['config'], function(){
-                require(['navigation'], function(navigation){
-                    navigation.init();
-                });
-            });
-            require(['config'], function(){
-                require(['view/ui_components/corusel/scripts/newsdata'], function(newsdata){
-                    console.log(newsdata.data());
-                });
             });
         </script>
     </body>
