@@ -1,12 +1,21 @@
 define(['jquery'], function($){
 
-    return {
-        data : function(){
-            this.data = $.get(
-                "/Model/Api/News.php",
-            );
-
-            return this.data;
-        }
+    function ajaxCall(callback){
+        $.ajax({
+            async:false,
+            url: "/Model/Api/News.php",
+            type: 'GET',
+            dataType: 'json', // added data type
+            success: function(res) {
+                callback(res);
+            }
+        });
     }
-})
+    var data = [];
+    ajaxCall(result => {
+        data = result;
+    });
+
+    return data;
+});
+    
